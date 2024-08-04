@@ -6,6 +6,14 @@ body {
   padding: 0;
 }
 
+/* reset chapter and figure counters on the body */
+body {
+  counter-reset: chapternum figurenum;
+  font-family: Serif;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
 @page {
   /* A5 = 14.8cm x 21cm */
   size: A5;
@@ -36,71 +44,55 @@ img {
   content: "";
 }
 
-/* .frontcover svg {
-  width: 100%;
-} */
 
 /* styles for the right hand spread
 Bottom left we display the title of the book, bottom right the page using a CSS counter, top right the content of the current chapter */
-/* @page: right {
+@page:right {
   @bottom-left {
-    margin: 10pt 0 30pt 0;
-    border-top: 0.25pt solid #666;
-    content: "Our Cats";
+    margin: 0.36cm 0 1cm 0;
+    /* border-top: 0.01cm solid #888; */
+    /* content: "Amor ao Bem"; */
     font-size: 9pt;
-    color: #333;
+    color: #555;
   }
   @bottom-right {
-    margin: 10pt 0 30pt 0;
-    border-top: 0.25pt solid #666;
+    margin: 0.36cm 0 1cm 0;
+    /* border-top: 0.01cm solid #888; */
     content: counter(page);
     font-size: 9pt;
+    color: #555;
   }
   @top-right {
     content: string(doctitle);
-    margin: 30pt 0 10pt 0;
+    margin: 1cm 0 0.36cm 0;
     font-size: 9pt;
-    color: #333;
+    color: #555;
   }
-} */
+}
 
 /* styles for the left hand spread 
 Bottom right book title, bottom left current page */
-/* @page: left {
+@page:left {
   @bottom-right {
-    margin: 10pt 0 30pt 0;
-    border-top: 0.25pt solid #666;
-    content: "Our Cats";
+    margin: 0.36cm 0 1cm 0;
+    /* border-top: 0.01cm solid #888; */
+    /* content: "Amor ao Bem"; */
     font-size: 9pt;
-    color: #333;
+    color: #555;
   }
   @bottom-left {
-    margin: 10pt 0 30pt 0;
-    border-top: 0.25pt solid #666;
+    margin: 0.36cm 0 1cm 0;
+    /* border-top: 0.01cm solid #888; */
     content: counter(page);
     font-size: 9pt;
+    color: #555;
   }
-} */
-
-/* first page */
-/* @page: first {
-  @bottom-right {
-    content: normal;
-    margin: 0;
+  @top-left {
+    content: "Amor ao Bem";
+    margin: 1cm 0 0.36cm 0;
+    font-size: 9pt;
+    color: #555;
   }
-
-  @bottom-left {
-    content: normal;
-    margin: 0;
-  }
-} */
-
-/* reset chapter and figure counters on the body */
-body {
-  counter-reset: chapternum figurenum;
-  font-family: Serif;
-  font-size: 11pt;
-  line-height: 1.5;
 }
 
 /* get the title of the current chapter - this will be the content of the h1 
@@ -132,23 +124,28 @@ figcaption:before {
 
 .fn {
   counter-increment: footnote;
+  font-size: 9pt;
+  color: #555;
 }
 
 .fn::footnote-call {
   content: counter(footnote);
-  font-size: 9pt;
   vertical-align: super;
   line-height: none;
+  font-size: 9pt;
+  /* color: #555; */
 }
 
 .fn::footnote-marker {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 9pt;
+  color: black;
 }
 
 @page {
   @footnotes {
-    border-top: 0.6pt solid black;
-    padding-top: 8pt;
+    border-top: 0.01cm solid #888;
+    padding-top: 0.36cm;
   }
 }
 
