@@ -106,7 +106,13 @@ h1 {
 }
 
 /* increment chapter counter */
-h1.chapter:before {
+/* h1.chapter:before {
+  counter-increment: chapternum;
+  content: counter(chapternum) ". ";
+} */
+
+/* increment chapter counter for h2 (As Palavras de Buda) */
+h2.chapter:before {
   counter-increment: chapternum;
   content: counter(chapternum) ". ";
 }
@@ -203,7 +209,6 @@ a.xref:after {
 .text-right {
   text-align: right;
 }
-
 
 .verse-p1 {
 /* Verse by the '1st person' in the poem dialog */
