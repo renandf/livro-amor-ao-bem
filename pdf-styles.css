@@ -197,3 +197,21 @@ a {
 a.xref:after {
   content: " (page " target-counter(attr(href, url), page) ")";
 }
+
+/* Utility classes */
+
+.text-right {
+  text-align: right;
+}
+
+
+.verse-p1 {
+/* Verse by the '1st person' in the poem dialog */
+  font-style: italic;
+}
+
+.verse-p2 {
+/* Verse by the '2nd person' in the poem dialog */
+  font-style: italic;
+  text-align: right;
+}
