@@ -14,7 +14,7 @@ body {
 
 /* reset chapter and figure counters on the body */
 body {
-  counter-reset: chapternum figurenum;
+  counter-reset: chapternum figurenum footnote;
   font-family: BookFont, prince-no-fallback;
   font-weight: 400;
   font-size: 11pt;
@@ -122,7 +122,7 @@ h1 {
   string-set: doctitle content();
   page-break-before: always;
   counter-reset: figurenum;
-  counter-reset: footnote;
+  /* counter-reset: footnote; */
   line-height: 1.3;
 }
 
@@ -159,9 +159,9 @@ figcaption:before {
 .fn::footnote-call {
   content: counter(footnote);
   vertical-align: super;
+  font-weight: 700;
+  font-size: 6pt;
   line-height: none;
-  font-size: 9pt;
-  /* color: #555; */
 }
 
 .fn::footnote-marker {
