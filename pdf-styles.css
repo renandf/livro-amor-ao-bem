@@ -1,5 +1,11 @@
 /* this stylesheet is used when generating a PDF with PrinceXML or any other tool that understands the CSS used. */
 
+@font-face {
+  font-family: BookFont;
+  src: prince-lookup("Inria Serif"),
+       local("../fonts/InriaSerif-Light.ttf") format("truetype");
+}
+
 html,
 body {
   margin: 0;
@@ -9,7 +15,8 @@ body {
 /* reset chapter and figure counters on the body */
 body {
   counter-reset: chapternum figurenum;
-  font-family: Serif;
+  font-family: BookFont, prince-no-fallback;
+  font-weight: 400;
   font-size: 11pt;
   line-height: 1.5;
 }
@@ -21,6 +28,7 @@ body {
   margin-bottom: 2cm;
   margin-inside: 2.5cm;
   margin-outside: 1.8cm;
+  font-family: BookFont, prince-no-fallback;
 }
 
 @page:first {
@@ -52,6 +60,8 @@ Bottom left we display the title of the book, bottom right the page using a CSS 
     margin: 0.36cm 0 1cm 0;
     /* border-top: 0.01cm solid #888; */
     /* content: "Amor ao Bem"; */
+    font-family: BookFont, prince-no-fallback;
+    font-style: italic;
     font-size: 9pt;
     color: #555;
   }
@@ -59,12 +69,16 @@ Bottom left we display the title of the book, bottom right the page using a CSS 
     margin: 0.36cm 0 1cm 0;
     /* border-top: 0.01cm solid #888; */
     content: counter(page);
+    font-family: BookFont, prince-no-fallback;
     font-size: 9pt;
     color: #555;
   }
   @top-right {
     content: string(doctitle);
     margin: 1cm 0 0.36cm 0;
+    font-family: BookFont, prince-no-fallback;
+    font-style: italic;
+    font-weight: 300;
     font-size: 9pt;
     color: #555;
   }
@@ -77,6 +91,9 @@ Bottom right book title, bottom left current page */
     margin: 0.36cm 0 1cm 0;
     /* border-top: 0.01cm solid #888; */
     /* content: "Amor ao Bem"; */
+    font-family: BookFont, prince-no-fallback;
+    font-style: italic;
+    font-weight: 300;
     font-size: 9pt;
     color: #555;
   }
@@ -84,12 +101,16 @@ Bottom right book title, bottom left current page */
     margin: 0.36cm 0 1cm 0;
     /* border-top: 0.01cm solid #888; */
     content: counter(page);
+    font-family: BookFont, prince-no-fallback;
     font-size: 9pt;
     color: #555;
   }
   @top-left {
     content: "Amor ao Bem";
     margin: 1cm 0 0.36cm 0;
+    font-family: BookFont, prince-no-fallback;
+    font-style: italic;
+    font-weight: 300;
     font-size: 9pt;
     color: #555;
   }
@@ -130,6 +151,7 @@ figcaption:before {
 
 .fn {
   counter-increment: footnote;
+  font-weight: 300;
   font-size: 9pt;
   color: #555;
 }
@@ -152,6 +174,7 @@ figcaption:before {
   @footnotes {
     border-top: 0.01cm solid #888;
     padding-top: 0.36cm;
+    font-family: BookFont, prince-no-fallback;
   }
 }
 
@@ -160,7 +183,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: bold;
+  font-family: BookFont, prince-no-fallback;
+  font-weight: 700;
   page-break-after: avoid;
   page-break-inside: avoid;
 }
