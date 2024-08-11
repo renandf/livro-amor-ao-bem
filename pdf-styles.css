@@ -56,10 +56,8 @@ img {
 /* styles for the right hand spread
 Bottom left we display the title of the book, bottom right the page using a CSS counter, top right the content of the current chapter */
 @page:right {
-  @bottom-left {
+  /* @bottom-left {
     margin: 0.36cm 0 1cm 0;
-    /* border-top: 0.01cm solid #888; */
-    /* content: "Amor ao Bem"; */
     font-family: BookFont, prince-no-fallback;
     font-style: italic;
     font-size: 9pt;
@@ -67,10 +65,17 @@ Bottom left we display the title of the book, bottom right the page using a CSS 
   }
   @bottom-right {
     margin: 0.36cm 0 1cm 0;
-    /* border-top: 0.01cm solid #888; */
     content: counter(page);
     font-family: BookFont, prince-no-fallback;
     font-size: 9pt;
+    color: #555;
+  } */
+  @bottom-center {
+    margin: 0.36cm 0 1cm 0;
+    content: counter(page);
+    font-family: BookFont, prince-no-fallback;
+    font-weight: 700;
+    font-size: 7pt;
     color: #555;
   }
   @top-right {
@@ -87,10 +92,8 @@ Bottom left we display the title of the book, bottom right the page using a CSS 
 /* styles for the left hand spread 
 Bottom right book title, bottom left current page */
 @page:left {
-  @bottom-right {
+  /* @bottom-right {
     margin: 0.36cm 0 1cm 0;
-    /* border-top: 0.01cm solid #888; */
-    /* content: "Amor ao Bem"; */
     font-family: BookFont, prince-no-fallback;
     font-style: italic;
     font-weight: 300;
@@ -99,10 +102,17 @@ Bottom right book title, bottom left current page */
   }
   @bottom-left {
     margin: 0.36cm 0 1cm 0;
-    /* border-top: 0.01cm solid #888; */
     content: counter(page);
     font-family: BookFont, prince-no-fallback;
     font-size: 9pt;
+    color: #555;
+  } */
+  @bottom-center {
+    margin: 0.36cm 0 1cm 0;
+    content: counter(page);
+    font-family: BookFont, prince-no-fallback;
+    font-weight: 700;
+    font-size: 7pt;
     color: #555;
   }
   @top-left {
@@ -162,11 +172,13 @@ figcaption:before {
   font-weight: 700;
   font-size: 6pt;
   line-height: none;
+  color: black;
 }
 
 .fn::footnote-marker {
-  /* font-weight: bold; */
-  font-size: 9pt;
+  vertical-align: super;
+  font-weight: 400;
+  font-size: 8pt;
   color: black;
 }
 
@@ -204,6 +216,12 @@ ul.toc {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* Emphasis text on 'Serif' font to fix missing special characters */
+em {
+  font-family: Serif, prince-no-fallback;
+  font-size: 110%;
 }
 
 /* create page numbers using target-counter in the TOC */
