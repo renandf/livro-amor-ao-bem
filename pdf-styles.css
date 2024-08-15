@@ -40,7 +40,7 @@ body {
   }
 }
 
-/* styles for pages on the right */
+/* Styles for pages on the right */
 @page:right {
   @top-right {
     content: string(doctitle);
@@ -53,7 +53,7 @@ body {
   }
 }
 
-/* styles for pages on the left */
+/* Styles for pages on the left */
 @page:left {
   @top-left {
     content: "Amor ao Bem";
@@ -77,6 +77,31 @@ div.frontcover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @bottom-center {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+}
+
+/* Second cover */
+div.second-cover {
+  page: second-cover;
+  -prince-page-group: start;
+}
+
+@page second-cover {
+  background-image: url("images/second-cover.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-inside: 1.8cm;
+  margin-outside: 1.8cm;
 
   @bottom-center {
     content: normal;
@@ -139,6 +164,7 @@ div.intro-page {
   }
 }
 
+
 img {
   max-width: 100%;
 }
@@ -153,11 +179,21 @@ h1 {
   line-height: 1.3;
 }
 
-/* increment chapter counter */
-/* h1.chapter:before {
-  counter-increment: chapternum;
-  content: counter(chapternum) ". ";
-} */
+/* Special title and subtitle for the two main parts of the book */
+p.pali {
+  margin-top: 8cm;
+  margin-bottom: 0;
+  font-family: Serif, prince-no-fallback;
+  font-size: 22pt;
+  font-style: italic;
+  text-align: center;
+}
+p.pali-subtitle {
+  margin-top: 0;
+  text-align: center;
+  font-size: 12pt;
+}
+
 
 /* increment chapter counter for h2 (As Palavras de Buda) */
 h2.chapter:before {
@@ -214,19 +250,19 @@ h4,
 h5 {
   font-family: BookFont, prince-no-fallback;
   font-weight: 700;
-  page-break-after: avoid;
-  page-break-inside: avoid;
+  break-after: avoid;
+  break-inside: avoid;
 }
 
 h1 + p,
 h2 + p,
 h3 + p {
-  page-break-before: avoid;
+  break-before: avoid;
 }
 
 table,
 figure {
-  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 ul.toc {
