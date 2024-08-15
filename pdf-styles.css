@@ -17,8 +17,8 @@ body {
   counter-reset: chapternum figurenum footnote;
   font-family: BookFont, prince-no-fallback;
   font-weight: 400;
-  font-size: 11pt;
-  line-height: 1.5;
+  font-size: 10.5pt;
+  line-height: 1.4;
 }
 
 @page {
