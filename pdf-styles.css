@@ -1,4 +1,4 @@
-/* this stylesheet is used when generating a PDF with PrinceXML or any other tool that understands the CSS used. */
+/* This stylesheet is used when generating a PDF with PrinceXML or any other tool that understands the CSS used. */
 
 @font-face {
   font-family: BookFont;
@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 
-/* reset chapter and figure counters on the body */
+/* Reset chapter and figure counters on the body */
 body {
   counter-reset: chapternum figurenum footnote;
   font-family: BookFont, prince-no-fallback;
@@ -29,47 +29,7 @@ body {
   margin-inside: 2.5cm;
   margin-outside: 1.8cm;
   font-family: BookFont, prince-no-fallback;
-}
 
-@page:first {
-  size: A5;
-  margin: 0;
-  background-image: url("images/cover.svg");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  /* background-size: 104%;
-  marks: crop cross;
-  bleed: 0.25in;
-  -prince-trim: 0.25in; */
-}
-
-img {
-  max-width: 100%;
-}
-
-.frontcover {
-  content: "";
-}
-
-
-/* styles for the right hand spread
-Bottom left we display the title of the book, bottom right the page using a CSS counter, top right the content of the current chapter */
-@page:right {
-  /* @bottom-left {
-    margin: 0.36cm 0 1cm 0;
-    font-family: BookFont, prince-no-fallback;
-    font-style: italic;
-    font-size: 9pt;
-    color: #555;
-  }
-  @bottom-right {
-    margin: 0.36cm 0 1cm 0;
-    content: counter(page);
-    font-family: BookFont, prince-no-fallback;
-    font-size: 9pt;
-    color: #555;
-  } */
   @bottom-center {
     margin: 0.36cm 0 1cm 0;
     content: counter(page);
@@ -78,6 +38,10 @@ Bottom left we display the title of the book, bottom right the page using a CSS 
     font-size: 7pt;
     color: #555;
   }
+}
+
+/* styles for pages on the right */
+@page:right {
   @top-right {
     content: string(doctitle);
     margin: 1cm 0 0.36cm 0;
@@ -89,32 +53,8 @@ Bottom left we display the title of the book, bottom right the page using a CSS 
   }
 }
 
-/* styles for the left hand spread 
-Bottom right book title, bottom left current page */
+/* styles for pages on the left */
 @page:left {
-  /* @bottom-right {
-    margin: 0.36cm 0 1cm 0;
-    font-family: BookFont, prince-no-fallback;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 9pt;
-    color: #555;
-  }
-  @bottom-left {
-    margin: 0.36cm 0 1cm 0;
-    content: counter(page);
-    font-family: BookFont, prince-no-fallback;
-    font-size: 9pt;
-    color: #555;
-  } */
-  @bottom-center {
-    margin: 0.36cm 0 1cm 0;
-    content: counter(page);
-    font-family: BookFont, prince-no-fallback;
-    font-weight: 700;
-    font-size: 7pt;
-    color: #555;
-  }
   @top-left {
     content: "Amor ao Bem";
     margin: 1cm 0 0.36cm 0;
@@ -126,11 +66,88 @@ Bottom right book title, bottom left current page */
   }
 }
 
+/* Front cover */
+div.frontcover {
+  page: frontcover;
+  -prince-page-group: start;
+}
+
+@page frontcover {
+  background-image: url("images/cover.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @bottom-center {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+}
+
+/* Blank page */
+div.blank {
+  page: blank;
+  -prince-page-group: start;
+}
+
+@page blank {
+  content: "";
+
+  @bottom-center {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+}
+
+/* Intro pages - remove information in the borders */
+div.intro-page {
+  page: intro-page;
+  -prince-page-group: start;
+}
+
+@page intro-page {
+  @bottom-center {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+}
+
+@page:blank {
+  @bottom-center {
+    content: normal;
+  }
+  @top-left {
+    content: normal;
+  }
+  @top-right {
+    content: normal;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
 /* get the title of the current chapter - this will be the content of the h1 
 reset figure counter as figures start from 1 in each chapter */
 h1 {
   string-set: doctitle content();
-  page-break-before: always;
+  break-before: recto;
   counter-reset: figurenum;
   /* counter-reset: footnote; */
   line-height: 1.3;
