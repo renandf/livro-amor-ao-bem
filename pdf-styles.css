@@ -218,7 +218,6 @@ div.intro-page {
   }
 }
 
-
 img {
   max-width: 100%;
 }
@@ -342,6 +341,10 @@ a.xref:after {
 
 .text-right {
   text-align: right;
+}
+
+.text-xs {
+  font-size: var(--font-size-xs);
 }
 
 .verse-p1 {
