@@ -3,6 +3,7 @@
 /* Variables - main book styles should be updated here */
 :root {
   --font-size-default: 10.5pt;
+  --font-size-lg: 12pt;
   --font-size-sm: 9pt;
   --font-size-xs: 8pt;
   --font-size-xxs: 6pt;
@@ -120,26 +121,20 @@ div.frontcover {
   }
 }
 
-/* Second cover */
-div.second-cover {
-  page: second-cover;
+/* Main chapters cover */
+div.secondary-cover {
+  page: secondary-cover;
   -prince-page-group: start;
 }
 
-@page second-cover {
-  background-image: url("images/second-cover.svg");
+@page secondary-cover {
+  background-image: url("images/secondary-cover.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin-inside: var(--page-margin-sm);
   margin-outside: var(--page-margin-sm);
 
-  /* @page-float-bottom {
-    content: "Monge Tyāgo";
-    font-weight: var(--font-weight-light);
-    font-size: var(--font-size-sm);
-    color: #555;
-  } */
   @bottom-center {
     content: normal;
   }
@@ -149,6 +144,28 @@ div.second-cover {
   @top-right {
     content: normal;
   }
+}
+
+/* Special title and subtitle for the two main parts of the book */
+div.secondary-cover p.pali {
+  margin-top: -1.7cm;
+  font-size: 22pt;
+  font-family: Serif, prince-no-fallback;
+  font-style: italic;
+  text-align: center;
+}
+div.secondary-cover h1.pali-translation {
+  margin-top: 10.2cm;
+  margin-bottom: 0;
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-lg);
+  text-align: center;
+}
+div.secondary-cover p.author {
+  margin-top: 7.5cm;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  text-align: center;
 }
 
 /* Blank page */
@@ -210,27 +227,11 @@ img {
 reset figure counter as figures start from 1 in each chapter */
 h1 {
   string-set: doctitle content();
-  break-before: recto;
   counter-reset: figurenum;
+  /* break-before: recto; */
   /* counter-reset: footnote; */
   /* line-height: 1.3; */
 }
-
-/* Special title and subtitle for the two main parts of the book */
-p.pali {
-  margin-top: 8cm;
-  margin-bottom: 0;
-  font-family: Serif, prince-no-fallback;
-  font-size: 22pt;
-  font-style: italic;
-  text-align: center;
-}
-p.pali-subtitle {
-  margin-top: 0;
-  text-align: center;
-  font-size: 12pt;
-}
-
 
 /* increment chapter counter for h2 (As Palavras de Buda) */
 h2.chapter:before {
