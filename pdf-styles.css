@@ -1,5 +1,35 @@
 /* This stylesheet is used when generating a PDF with PrinceXML or any other tool that understands the CSS used. */
 
+/* Variables - main book styles should be updated here */
+:root {
+  --font-size-default: 10.5pt;
+  --font-size-sm: 9pt;
+  --font-size-xs: 8pt;
+  --font-size-xxs: 6pt;
+  
+  --line-height-default: 1.4;
+
+  --color-text-default: black;
+  --color-text-light: #555;
+  --color-ui-light: #888;
+  
+  --font-weight-default: 400;
+  --font-weight-bold: 700;
+  --font-weight-light: 300;
+  
+  --page-margin-sm: 1.8cm;
+  --page-margin-md: 2cm;
+  --page-margin-lg: 2.5cm;
+  
+  --page-region-margin-outer: 0.36cm;
+  --page-region-margin-inner: 1cm;
+  --page-region-margin-left: 0;
+  --page-region-margin-right: 0;
+  
+  --border-thickness-default: 0.01cm;
+}
+
+/* Main font */
 @font-face {
   font-family: BookFont;
   src: prince-lookup("Inria Serif"),
@@ -16,27 +46,28 @@ body {
 body {
   counter-reset: chapternum figurenum footnote;
   font-family: BookFont, prince-no-fallback;
-  font-weight: 400;
-  font-size: 10.5pt;
-  line-height: 1.4;
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-default);
+  line-height: var(--line-height-default);
+  color: var(--color-text-default);
 }
 
 @page {
   /* A5 = 14.8cm x 21cm */
   size: A5;
-  margin-top: 2cm;
-  margin-bottom: 2cm;
-  margin-inside: 2.5cm;
-  margin-outside: 1.8cm;
+  margin-top: var(--page-margin-md);
+  margin-bottom: var(--page-margin-md);
+  margin-inside: var(--page-margin-lg);
+  margin-outside: var(--page-margin-sm);
   font-family: BookFont, prince-no-fallback;
 
   @bottom-center {
-    margin: 0.36cm 0 1cm 0;
+    margin: var(--page-region-margin-outer) var(--page-region-margin-right) var(--page-region-margin-inner) var(--page-region-margin-left);
     content: counter(page);
     font-family: BookFont, prince-no-fallback;
-    font-weight: 700;
-    font-size: 7pt;
-    color: #555;
+    font-weight: var(--font-weight-default);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
   }
 }
 
@@ -44,12 +75,12 @@ body {
 @page:right {
   @top-right {
     content: string(doctitle);
-    margin: 1cm 0 0.36cm 0;
+    margin: var(--page-region-margin-inner) var(--page-region-margin-right) var(--page-region-margin-outer) var(--page-region-margin-left);
     font-family: BookFont, prince-no-fallback;
     font-style: italic;
-    font-weight: 300;
-    font-size: 9pt;
-    color: #555;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
   }
 }
 
@@ -57,12 +88,12 @@ body {
 @page:left {
   @top-left {
     content: "Amor ao Bem";
-    margin: 1cm 0 0.36cm 0;
+    margin: var(--page-region-margin-inner) var(--page-region-margin-right) var(--page-region-margin-outer) var(--page-region-margin-left);
     font-family: BookFont, prince-no-fallback;
     font-style: italic;
-    font-weight: 300;
-    font-size: 9pt;
-    color: #555;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
   }
 }
 
@@ -100,9 +131,15 @@ div.second-cover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-inside: 1.8cm;
-  margin-outside: 1.8cm;
+  margin-inside: var(--page-margin-sm);
+  margin-outside: var(--page-margin-sm);
 
+  /* @page-float-bottom {
+    content: "Monge Tyāgo";
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-sm);
+    color: #555;
+  } */
   @bottom-center {
     content: normal;
   }
@@ -176,7 +213,7 @@ h1 {
   break-before: recto;
   counter-reset: figurenum;
   /* counter-reset: footnote; */
-  line-height: 1.3;
+  /* line-height: 1.3; */
 }
 
 /* Special title and subtitle for the two main parts of the book */
@@ -214,31 +251,31 @@ figcaption:before {
 
 .fn {
   counter-increment: footnote;
-  font-weight: 300;
-  font-size: 9pt;
-  color: #555;
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
 }
 
 .fn::footnote-call {
   content: counter(footnote);
   vertical-align: super;
-  font-weight: 700;
-  font-size: 6pt;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xxs);
   line-height: none;
-  color: black;
+  color: var(--color-text-default);
 }
 
 .fn::footnote-marker {
   vertical-align: super;
-  font-weight: 400;
-  font-size: 8pt;
-  color: black;
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-default);
 }
 
 @page {
   @footnotes {
-    border-top: 0.01cm solid #888;
-    padding-top: 0.36cm;
+    border-top: var(--border-thickness-default) solid var(--color-ui-light);
+    padding-top: var(--page-region-margin-outer);
     font-family: BookFont, prince-no-fallback;
   }
 }
@@ -249,7 +286,7 @@ h3,
 h4,
 h5 {
   font-family: BookFont, prince-no-fallback;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   break-after: avoid;
   break-inside: avoid;
 }
@@ -272,6 +309,7 @@ ul.toc {
 }
 
 /* Emphasis text on 'Serif' font to fix missing special characters */
+/* and slightly bigger to align with default font */
 em {
   font-family: Serif, prince-no-fallback;
   font-size: 110%;
@@ -291,7 +329,7 @@ ul.toc li a {
 }
 
 a {
-  color: #000;
+  color: var(--color-text-default);
 }
 
 /* add page number to cross references */
