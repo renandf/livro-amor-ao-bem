@@ -353,6 +353,7 @@ a.xref:after {
 
 .quote-center {
   margin: 8cm 0 7cm 1cm;
+  font-style: italic;
 }
 
 .quote-center::before {
@@ -364,13 +365,27 @@ a.xref:after {
   color: var(--color-ui-light);
 }
 
-.verse-p1 {
-/* Verse by the '1st person' in the poem dialog */
+.verse-block {
+  margin-left: 2.5cm;
+  padding-left: 0.5cm;
+  border-left: var(--border-thickness-default) solid var(--color-ui-light);
   font-style: italic;
 }
 
-.verse-p2 {
-/* Verse by the '2nd person' in the poem dialog */
+.verse-block--monk {
+  font-family: Serif, prince-no-fallback;
   font-style: italic;
-  text-align: right;
+  font-size: 110%;
+}
+
+.verse-block--monk::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/monk.svg");
+}
+
+.verse-block--teenager::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/monk.svg");
 }
