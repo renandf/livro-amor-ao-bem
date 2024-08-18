@@ -11,8 +11,8 @@
   --line-height-default: 1.4;
 
   --color-text-default: black;
-  --color-text-light: #555;
-  --color-ui-light: #888;
+  --color-text-light: #666;
+  --color-ui-light: #aaa;
   
   --font-weight-default: 400;
   --font-weight-bold: 700;
@@ -345,6 +345,23 @@ a.xref:after {
 
 .text-xs {
   font-size: var(--font-size-xs);
+}
+
+.ml-1 {
+  margin-left: 1cm;
+}
+
+.quote-center {
+  margin: 8cm 0 7cm 1cm;
+}
+
+.quote-center::before {
+  position: absolute;
+  margin-top: -1.4cm;
+  margin-left: -1.4cm;
+  content: "“";
+  font-size: 80pt;
+  color: var(--color-ui-light);
 }
 
 .verse-p1 {
