@@ -161,6 +161,11 @@ div.secondary-cover h1.pali-translation {
   font-size: var(--font-size-lg);
   text-align: center;
 }
+div.secondary-cover h1 {
+  margin-top: 9cm;
+  margin-bottom: 0;
+  text-align: center;
+}
 div.secondary-cover p.author {
   margin-top: 7.5cm;
   font-size: var(--font-size-sm);
@@ -343,6 +348,10 @@ a.xref:after {
   text-align: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-xs {
   font-size: var(--font-size-xs);
 }
@@ -370,6 +379,7 @@ a.xref:after {
   padding-left: 0.5cm;
   border-left: var(--border-thickness-default) solid var(--color-ui-light);
   font-style: italic;
+  break-inside: avoid;
 }
 
 .verse-block--monk {
