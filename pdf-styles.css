@@ -13,6 +13,7 @@
   --color-text-default: black;
   --color-text-light: #666;
   --color-ui-light: #aaa;
+  --color-ui-dark: #666;
   
   --font-weight-default: 400;
   --font-weight-bold: 700;
@@ -337,7 +338,7 @@ a {
   color: var(--color-text-default);
 }
 
-/* add page number to cross references */
+/* Add page number to cross references */
 a.xref:after {
   content: " (page " target-counter(attr(href, url), page) ")";
 }
@@ -374,18 +375,24 @@ a.xref:after {
   color: var(--color-ui-light);
 }
 
+/* Verse blocks with illustrations */
+
 .verse-block {
   margin-left: 2.5cm;
+  margin-bottom: 0.5cm;
   padding-left: 0.5cm;
   border-left: var(--border-thickness-default) solid var(--color-ui-light);
   font-style: italic;
-  break-inside: avoid;
+  color: var(--color-text-light);
 }
 
 .verse-block--monk {
+  margin-bottom: 1cm;
+  border-left: var(--border-thickness-default) solid var(--color-ui-dark);
   font-family: Serif, prince-no-fallback;
   font-style: italic;
   font-size: 110%;
+  color: var(--color-text-default);
 }
 
 .verse-block--monk::before {
@@ -394,8 +401,38 @@ a.xref:after {
   content: url("images/monk.svg");
 }
 
-.verse-block--teenager::before {
+.verse-block--younger::before {
   position: absolute;
   margin-left: -3cm;
-  content: url("images/monk.svg");
+  content: url("images/younger.svg");
+}
+
+.verse-block--young::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/young.svg");
+}
+
+.verse-block--teen::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/teen.svg");
+}
+
+.verse-block--older-teen::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/older-teen.svg");
+}
+
+.verse-block--young-adult::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/young-adult.svg");
+}
+
+.verse-block--adult::before {
+  position: absolute;
+  margin-left: -3cm;
+  content: url("images/adult.svg");
 }
