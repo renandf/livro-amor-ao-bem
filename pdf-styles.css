@@ -303,6 +303,20 @@ h3 + p {
   break-before: avoid;
 }
 
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+p.quote::before {
+  font-family: BookFont, prince-no-fallback;
+  content:"— ";
+}
+
+p.quote.quote--second-person {
+  font-style: italic;
+}
+
 table,
 figure {
   break-inside: avoid;
@@ -375,7 +389,7 @@ a.xref:after {
   color: var(--color-ui-light);
 }
 
-/* Verse blocks with illustrations */
+/* Verse blocks */
 
 .verse-block {
   margin-left: 2.5cm;
@@ -435,4 +449,32 @@ a.xref:after {
   position: absolute;
   margin-left: -3cm;
   content: url("images/adult.svg");
+}
+
+.verse-block--quote::before {
+  position: absolute;
+  margin-left: -2.5cm;
+  text-align: right;
+  font-size: var(--font-size-xs);
+  content: "Isto é o que \A foi dito:";
+  white-space: pre-wrap;
+}
+
+.verse-reason {
+  font-style: italic;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.verse-reason::before {
+  position: absolute;
+  margin-left: -1.78cm;
+  content: url("images/arrow-reason-left.svg");
+}
+
+.verse-reason::after {
+  position: absolute;
+  margin-left: 0.3cm;
+  content: url("images/arrow-reason-right.svg");
 }
