@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <head>
-  <meta charset="utf-8" />
-  <title>Amor ao Bem</title>
-  <meta name="author" content="Monge Tyāgo"/>
-  <meta name="subject" content="Se, por um lado, “Amor ao Bem” é uma carta dedicada aos que me rodearam nesta vida, por outro, eu espero que seja, para aqueles que buscam no escuro, uma preciosa lamparina."/>
-  <meta name="keywords" content="Buda, budismo"/>
-  <meta name="date" content="2014-07-15"/>
-  <link rel="stylesheet" media="print" href="./pdf-styles.css" />
+    <meta charset="utf-8" />
+    <title>Amor ao Bem</title>
+    <meta name="author" content="Monge Tyāgo"/>
+    <meta name="subject" content="Se, por um lado, “Amor ao Bem” é uma carta dedicada aos que me rodearam nesta vida, por outro, eu espero que seja, para aqueles que buscam no escuro, uma preciosa lamparina."/>
+    <meta name="keywords" content="Buda, budismo"/>
+    <meta name="date" content="2014-07-15"/>
+    <link rel="stylesheet" media="print" href="./pdf-styles.css" />
+    <script type="text/javascript" src="./functions.js"></script>
   </head>
-  <body>
+  <body onload="toc('h2')">
     <!-- Intro pages -->
     <div class="frontcover"></div>
     <div class="blank"></div>
@@ -32,46 +33,46 @@
       </p>
     </div>
     <div class="intro-page">
-      <h1>Conteúdo</h1>
 
-      <ul class="toc">
-        <li><a href="#ch1">Colofão</a></li>
-        <li><a href="#ch2">Amor ao Bem</a></li>
-        <li><a href="#ch3">As Palavras do Buda</a></li>
-        <li><a href="#ch4">Notas de Tradução</a></li>
-        <li><a href="#ch5">Abreviações</a></li>
-        <li><a href="#ch6">Bibliografia</a></li>
-        <li><a href="#ch7">Sumário dos Textos Canônicos</a></li>
-        <li><a href="#ch8">Notas</a></li>
-      </ul>
+      <!-- ABREVIAÇÕES -->
+
+      <h1 id="ch-abreviacoes">Sumário</h1>
+
+      <!-- TODO: 10 abreviações, 5 de cada lado numa coluna diferente -->
+      <!-- Kd	Vinaya Khandhaka
+      DN	Dīgha Nikāya
+      MN	Majjhima Nikāya
+      SN	Saṁyutta Nikāya
+      AN	Aṅguttara Nikāya
+      Dhp	Dhammapada
+      Snp	Sutta Nipāta
+      Ud	Udāna
+      Iti	Itivuttaka
+      Ja	Jātaka -->
+
+      <!-- SUMÁRIO -->
+
+      <h1 id="ch-sumario">Sumário</h1>
+
+      <ol class="toc">
+        <li><a href="#ch-amor-ao-bem">Amor ao Bem</a></li>
+        <li><a href="#ch-p-buda">As Palavras do Buda</a></li>
+        <!-- <li><a href="#ch-abreviacoes">Abreviações</a></li> -->
+        <li><a href="#ch-colofao">Colofão</a></li>
+        <li><a href="#ch-notas-traducao">Notas de Tradução</a></li>
+        <li><a href="#ch-bibliografia">Bibliografia</a></li>
+        <!-- <li><a href="#ch7">Sumário dos Textos Canônicos</a></li> -->
+        <!-- <li><a href="#ch8">Notas</a></li> -->
+      </ol>
 
     </div>
 
-    <h1 id="ch1">Colofão</h1>
-    <p>Uma vez, um monge disse a outro monge:</p>
+    <!-- <div class="blank"></div> -->
 
-    <p class="quote">No que tanto pensas?</p>
-    <p class="quote quote--second-person">Estou tentando descobrir como explicar para a minha família e para os meus amigos o que significa ter me tornado um monge.</p>
-    <p class="quote">Se descobrir, por favor, me avisa.</p>
-
-    <p>Escrito em Setembro de 2022, durante a minha estada no Centro de Estudos Budistas Bodisatva (CEBB), em Alto Paraíso de Goiás - GO, o poema “Amor ao Bem” é, por um lado, uma tentativa de conduzir parentes e amigos interessados a um significado genuíno do Budismo. O formato do livro, talvez, seja inesperado. Quem sabe o leitor se alegre ainda ao descobrir que monges em séculos passados não fizeram diferente: eles escreveram epístolas poéticas explicando o seu entendimento sobre os ensinamentos do Bhagavam Gautama Buda. Por exemplo, o ven. Nāgārjūna, na Índia, escreveu para o rei Sātavahāna e, no Sri Lanka, o ven. Kavicakkavatti Ānanda escreveu para o seu amigo, o ven. Buddhasoma.</p>
-
-    <p>Assim, esta introdução ao Budismo continua uma tradição de mais de dois mil anos. Porém, enquanto que as palavras desses veneráveis do passado se tornaram textos raiz, fontes de comentários e alvos de estudos por parte das gerações posteriores, o “Amor ao Bem” é mera desculpa para apresentar as palavras do Bhagavam da maneira como foram primorosamente preservadas no cânone em páli (esta, a sua língua original). Para o monge que aqui escreve, esses, sim, são os textos raiz. Já os versos com os quais adorno-os são apenas pequenos comentários.</p>
-
-    <p>Se, por um lado, “Amor ao Bem” é uma carta dedicada aos que me rodearam nesta vida, por outro, eu espero que seja, para aqueles que buscam no escuro, uma preciosa lamparina.</p>
-
-    <p class="text-right"><small>
-      Monge Tyāgo<br />
-      Santuário Sāsanarakkha, Malásia<br />
-      Setembro de 2023
-    </small></p>
-
-    <div class="blank"></div>
-
-    <!-- INTRO CHAPTER -->
+    <!-- CHAPTER: AMOR AO BEM -->
 
     <div class="secondary-cover">
-      <h1 id="ch2">Amor ao Bem</h1>
+      <h1 id="ch-amor-ao-bem">Amor ao Bem</h1>
       <p class="text-center"><em>Parte 1</em></p>
     </div>
 
@@ -349,10 +350,10 @@
       e aqui mesmo feliz viveras.
     </p>
 
-    <!-- MAIN CHAPTER -->
+    <!-- CHAPTER: AS PALAVRAS DE BUDA -->
 
     <div class="secondary-cover">
-      <h1 id="ch3" class="pali-translation">As Palavras do Buda</h1>
+      <h1 id="ch-p-buda" class="pali-translation">As Palavras do Buda</h1>
       <p class="pali">Buddhavacana</p>
     </div>
 
@@ -365,7 +366,7 @@
 
     <p class="verse-reason">Por que motivo isso foi dito?</p>
 
-    <h2 class="chapter">Ao Bahadrako</h2>
+    <h2 id="ch-p-buda-1" class="chapter">Ao Bahadrako</h2>
 
     <p>Uma vez, quando o Bhagavam Buda<span class="fn"><strong>Bhagavam:</strong> significa, literalmente, “cheio de fortuna”. É uma forma elevada de se referir à uma pessoa importante e é a maneira pela qual o Buda (lit. “o Desperto”) era chamado pelos seus seguidores.</span> estava vivendo entre os mallaenses<span class="fn"><strong>Mallaenses:</strong> habitantes do reino de Malla, parte de dezesseis reinos poderosos da Índia antiga. Nos relatos da invasão da Índia iniciada por Alexandre o Grande eles são identificados como Malloi.</span>, em uma vila chamada Uruvelakappa, o patriarca da vila, chamado Bhadrako, se dirigiu a ele, fez-lhe uma reverência e sentou-se em um canto. Sentado, ele disse ao Bhagavam Buda o seguinte:</p>
 
@@ -410,13 +411,34 @@
     <p class="quote quote--second-person">Patriarca, dessa maneira, também, pode-se saber que “quaisquer sofrimentos que surgem, todos eles surgem tendo o desejo como raiz, o desejo como motivo. Pois o desejo é a raiz do sofrimento.”</p>
 
 
-    <h2 class="chapter">Ao Hatthaka</h2>
+    <h2 id="ch-p-buda-2" class="chapter">Ao Hatthaka</h2>
 
-    <!-- ENDING CHAPTERS -->
+    <!-- CHAPTER: COLOFÃO -->
 
-    <h1 id="ch4">Notas de Tradução</h1>
+    <h1 id="ch-colofao">Colofão</h1>
+    <p>Uma vez, um monge disse a outro monge:</p>
+
+    <p class="quote">No que tanto pensas?</p>
+    <p class="quote quote--second-person">Estou tentando descobrir como explicar para a minha família e para os meus amigos o que significa ter me tornado um monge.</p>
+    <p class="quote">Se descobrir, por favor, me avisa.</p>
+
+    <p>Escrito em Setembro de 2022, durante a minha estada no Centro de Estudos Budistas Bodisatva (CEBB), em Alto Paraíso de Goiás - GO, o poema “Amor ao Bem” é, por um lado, uma tentativa de conduzir parentes e amigos interessados a um significado genuíno do Budismo. O formato do livro, talvez, seja inesperado. Quem sabe o leitor se alegre ainda ao descobrir que monges em séculos passados não fizeram diferente: eles escreveram epístolas poéticas explicando o seu entendimento sobre os ensinamentos do Bhagavam Gautama Buda. Por exemplo, o ven. Nāgārjūna, na Índia, escreveu para o rei Sātavahāna e, no Sri Lanka, o ven. Kavicakkavatti Ānanda escreveu para o seu amigo, o ven. Buddhasoma.</p>
+
+    <p>Assim, esta introdução ao Budismo continua uma tradição de mais de dois mil anos. Porém, enquanto que as palavras desses veneráveis do passado se tornaram textos raiz, fontes de comentários e alvos de estudos por parte das gerações posteriores, o “Amor ao Bem” é mera desculpa para apresentar as palavras do Bhagavam da maneira como foram primorosamente preservadas no cânone em páli (esta, a sua língua original). Para o monge que aqui escreve, esses, sim, são os textos raiz. Já os versos com os quais adorno-os são apenas pequenos comentários.</p>
+
+    <p>Se, por um lado, “Amor ao Bem” é uma carta dedicada aos que me rodearam nesta vida, por outro, eu espero que seja, para aqueles que buscam no escuro, uma preciosa lamparina.</p>
+
+    <p class="text-right"><small>
+      Monge Tyāgo<br />
+      Santuário Sāsanarakkha, Malásia<br />
+      Setembro de 2023
+    </small></p>
+
+    <!-- CHAPTER: NOTAS DE TRADUÇÃO -->
+
+    <h1 id="ch-notas-traducao">Notas de Tradução</h1>
     
-    <p>Todos os textos traduzidos nesta obra (discursos, excertos, histórias e versos canônicos) fazem parte do <em>tipiṭaka pāli</em>, o cânone páli budista que preserva os antigos ensinamentos do Bhagavam há mais de dois milênios em sua língua original. Em sua maior parte, os textos em páli foram consultados no website <a href="https://suttacentral.net/">suttacentral.net</a> (Sujāto, 2005), que, por sua vez, hospeda uma cópia da edição do <em>tipiṭaka Mahasangīti</em>, da linhagem burmesa<span class="fn">O texto original e outras traduções podem ser consultados seguindo a referência no Sumário dos Textos Canônicos de acordo com a seção “Abreviações”.</span>. Ainda, foram consultadas traduções em inglês desses textos feitas por Sujāto (2005), Ñanamoli (1995), Bodhi (2012, 2000), Cowell et al. (1880) e Kawasaki et al. (2018), além de textos paralelos encontrados no cânone chinês. As histórias <em>jātakas</em> (Ja) foram traduzidas a partir de traduções do inglês, com leves adaptações, enquanto que os seus versos foram traduzidos do páli. Textos em itálico que por vezes introduzem ou finalizam um texto não fazem parte do original, sendo meramente contextualizações fornecidas por este que escreve. Títulos foram dados aos discursos que, originalmente, não possuem título e, em alguns casos, o título foi alterado em nome da legibilidade.</p>
+    <p>Todos os textos traduzidos nesta obra (discursos, excertos, histórias e versos canônicos) fazem parte do <em>tipiṭaka pāli</em>, o cânone páli budista que preserva os antigos ensinamentos do Bhagavam há mais de dois milênios em sua língua original. Em sua maior parte, os textos em páli foram consultados no website <a href="https://suttacentral.net/">suttacentral.net</a> (Sujāto, 2005), que, por sua vez, hospeda uma cópia da edição do <em>tipiṭaka Mahasangīti</em>, da linhagem burmesa<span class="fn">O texto original e outras traduções podem ser consultados seguindo a referência no <a href="#ch-sumario"><em>Sumário</em></a> de acordo com a seção <a href="#ch-abreviacoes"><em>Abreviações</em></a>.</span>. Ainda, foram consultadas traduções em inglês desses textos feitas por Sujāto (2005), Ñanamoli (1995), Bodhi (2012, 2000), Cowell et al. (1880) e Kawasaki et al. (2018), além de textos paralelos encontrados no cânone chinês. As histórias <em>jātakas</em> (Ja) foram traduzidas a partir de traduções do inglês, com leves adaptações, enquanto que os seus versos foram traduzidos do páli. Textos em itálico que por vezes introduzem ou finalizam um texto não fazem parte do original, sendo meramente contextualizações fornecidas por este que escreve. Títulos foram dados aos discursos que, originalmente, não possuem título e, em alguns casos, o título foi alterado em nome da legibilidade.</p>
     
     <p>Salvo quaisquer restrições impostas pelas obras que aqui se encontram derivadas, toda esta obra é de domínio público.</p>
     
