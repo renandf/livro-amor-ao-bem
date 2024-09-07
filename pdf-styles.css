@@ -27,6 +27,10 @@
   --page-region-margin-inner: 1cm;
   --page-region-margin-left: 0;
   --page-region-margin-right: 0;
+
+  --space-sm: 0.5cm;
+  --space-md: 1cm;
+  --space-xxxl: 2.5cm;
   
   --border-thickness-default: 0.01cm;
 }
@@ -244,6 +248,11 @@ h2.chapter:before {
   content: counter(chapternum) ". ";
 }
 
+h2 {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
 /* increment and display figure counter */
 figcaption:before {
   counter-increment: figurenum;
@@ -260,6 +269,7 @@ figcaption:before {
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
+  font-style: normal;
 }
 
 .fn::footnote-call {
@@ -301,6 +311,11 @@ h1 + p,
 h2 + p,
 h3 + p {
   break-before: avoid;
+  margin-top: 0;
+}
+
+blockquote {
+  margin-left: calc(var(--space-xxxl) + var(--space-sm));
 }
 
 p {
@@ -329,7 +344,7 @@ ol.toc {
 }
 
 dl.toc-legend {
-  margin-bottom: 1cm;
+  margin-bottom: var(--space-md);
   font-family: Serif, prince-no-fallback;
   font-size: var(--font-size-sm);
   columns: 2;
@@ -365,7 +380,7 @@ ol.toc li {
 }
 
 ol.toc li.toc-h2 {
-  margin-left: 0.5cm;
+  margin-left: var(--space-sm);
   line-height: 1.5;
   font-size: var(--font-size-sm);
 }
@@ -448,16 +463,16 @@ a.xref:after {
 /* Verse blocks */
 
 .verse-block {
-  margin-left: 2.5cm;
-  margin-bottom: 0.5cm;
-  padding-left: 0.5cm;
+  margin-left: var(--space-xxxl);
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-sm);
   border-left: var(--border-thickness-default) solid var(--color-ui-light);
   font-style: italic;
   color: var(--color-text-light);
 }
 
 .verse-block--monk {
-  margin-bottom: 1cm;
+  margin-bottom: var(--space-md);
   border-left: var(--border-thickness-default) solid var(--color-ui-dark);
   font-family: Serif, prince-no-fallback;
   font-style: italic;
@@ -507,7 +522,7 @@ a.xref:after {
   content: url("images/adult.svg");
 }
 
-.verse-block--quote::before {
+.verse-block--start::before {
   position: absolute;
   margin-left: -2.5cm;
   text-align: right;
@@ -516,21 +531,29 @@ a.xref:after {
   white-space: pre-wrap;
 }
 
+.verse-block--end::before {
+  position: absolute;
+  margin-left: -3cm;
+  text-align: right;
+  font-size: var(--font-size-xs);
+  content: "É para lembrar \A disso que isto \A foi dito:";
+  white-space: pre-wrap;
+}
+
 .verse-reason {
+  margin-top: -0.3cm;
+  width: calc(var(--space-xxxl) - var(--space-sm));
   font-style: italic;
   font-size: var(--font-size-xs);
   color: var(--color-text-light);
-  text-align: center;
-}
-
-.verse-reason::before {
-  position: absolute;
-  margin-left: -1.78cm;
-  content: url("images/arrow-reason-left.svg");
+  text-align: right;
+  content: "Por que motivo \A isso foi dito?";
+  white-space: pre-wrap;
 }
 
 .verse-reason::after {
   position: absolute;
-  margin-left: 0.3cm;
-  content: url("images/arrow-reason-right.svg");
+  margin-top: -0.3cm;
+  margin-left: calc(var(--space-sm) - 0.08cm);
+  content: url("images/reason-arrow.svg");
 }
