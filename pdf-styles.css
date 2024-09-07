@@ -9,6 +9,7 @@
   --font-size-xxs: 6pt;
   
   --line-height-default: 1.4;
+  --line-height-condensed: 1.1;
 
   --color-text-default: black;
   --color-text-light: #666;
@@ -254,8 +255,8 @@ h2 {
 }
 
 .chapter-intro {
-  margin-left: var(--space-md);
-  margin-bottom: var(--space-md);
+  margin-left: var(--space-sm);
+  margin-bottom: var(--space-sm);
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
   font-style: italic;
@@ -273,9 +274,11 @@ figcaption:before {
 }
 
 .fn {
+  margin-bottom: 0.2cm;
   counter-increment: footnote;
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-sm);
+  line-height: var(--line-height-condensed);
   color: var(--color-text-light);
   font-style: normal;
 }
@@ -387,13 +390,21 @@ ol.toc li {
   line-height: 2;
 }
 
-ol.toc li.toc-h2 {
+ol.toc li.toc__reference {
+  line-height: 1.5;
+  font-family: BookFont, prince-no-fallback;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+ol.toc li.toc__h2 {
   margin-left: var(--space-sm);
   line-height: 1.5;
   font-size: var(--font-size-sm);
 }
 
-ol.toc li.toc-poem {
+ol.toc li.toc__poem {
   margin-left: var(--space-sm);
   line-height: 1.5;
   font-size: var(--font-size-sm);
@@ -404,11 +415,11 @@ ol.toc {
   counter-reset: subchapter;
 }
 
-li.toc-h2 a {
+li.toc__h2 a {
   counter-increment: subchapter;
 }
 
-li.toc-h2 a::before {
+li.toc__h2 a::before {
   /* Show ordered numbers before each subchapter  */
   content: counter(subchapter) ". ";
 }
@@ -440,6 +451,10 @@ a.xref:after {
   font-size: var(--font-size-xs);
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 .ml-1 {
   margin-left: 1cm;
 }
@@ -469,7 +484,7 @@ a.xref:after {
 
 .divider {
   height: 0.6cm;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   background-image: url("images/divider.svg");
   background-position: center;
   background-repeat: no-repeat;
