@@ -364,6 +364,12 @@ ol.toc li {
   line-height: 2;
 }
 
+ol.toc li.toc-h2 {
+  margin-left: 0.5cm;
+  line-height: 1.5;
+  font-size: var(--font-size-sm);
+}
+
 ol.toc li a {
   text-decoration: none;
 }
@@ -416,6 +422,13 @@ a.xref:after {
 .outdent-first-line {
   margin-left: 1.2cm;
   text-indent: -1.2cm;
+}
+
+.divider {
+  height: 0.6cm;
+  background-image: url("images/divider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Verse blocks */
