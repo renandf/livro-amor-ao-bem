@@ -81,7 +81,7 @@ body {
 /* Styles for pages on the right */
 @page:right {
   @top-right {
-    content: string(doctitle);
+    content: string(chaptertitle);
     margin: var(--page-region-margin-inner) var(--page-region-margin-right) var(--page-region-margin-outer) var(--page-region-margin-left);
     font-family: BookFont, prince-no-fallback;
     font-style: italic;
@@ -236,7 +236,7 @@ img {
 /* get the title of the current chapter - this will be the content of the h1 
 reset figure counter as figures start from 1 in each chapter */
 h1 {
-  string-set: doctitle content();
+  string-set: chaptertitle content();
   counter-reset: figurenum;
   /* break-before: recto; */
   /* counter-reset: footnote; */
@@ -244,12 +244,13 @@ h1 {
 }
 
 /* increment chapter counter for h2 (As Palavras de Buda) */
-h2.chapter:before {
+h2.chapter::before {
   counter-increment: chapternum;
   content: counter(chapternum) ". ";
 }
 
 h2 {
+  string-set: chaptertitle "As Palavras de Buda – " content();
   margin-top: var(--space-md);
   margin-bottom: var(--space-sm);
 }
