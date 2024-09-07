@@ -409,6 +409,15 @@ a.xref:after {
   color: var(--color-ui-light);
 }
 
+.break-before {
+  break-before: page;
+}
+
+.outdent-first-line {
+  margin-left: 1.2cm;
+  text-indent: -1.2cm;
+}
+
 /* Verse blocks */
 
 .verse-block {
