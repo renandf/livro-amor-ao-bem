@@ -469,6 +469,7 @@ a.xref:after {
 
 .divider {
   height: 0.6cm;
+  margin-bottom: var(--space-md);
   background-image: url("images/divider.svg");
   background-position: center;
   background-repeat: no-repeat;
