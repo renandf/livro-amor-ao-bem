@@ -355,7 +355,7 @@ em {
   font-size: 110%;
 }
 
-/* create page numbers using target-counter in the TOC */
+/* Create page numbers using target-counter in the TOC */
 ol.toc a::after {
   content: leader(".") target-counter(attr(href), page);
 }
@@ -368,6 +368,20 @@ ol.toc li.toc-h2 {
   margin-left: 0.5cm;
   line-height: 1.5;
   font-size: var(--font-size-sm);
+}
+
+ol.toc {
+  /* Create counter 'subchapter' for links within the TOC main chapter */
+  counter-reset: subchapter;
+}
+
+li.toc-h2 a {
+  counter-increment: subchapter;
+}
+
+li.toc-h2 a::before {
+  /* Show ordered numbers before each subchapter  */
+  content: counter(subchapter) ". ";
 }
 
 ol.toc li a {
