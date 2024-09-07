@@ -253,6 +253,14 @@ h2 {
   margin-bottom: var(--space-sm);
 }
 
+.chapter-intro {
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
 /* increment and display figure counter */
 figcaption:before {
   counter-increment: figurenum;
@@ -380,6 +388,12 @@ ol.toc li {
 }
 
 ol.toc li.toc-h2 {
+  margin-left: var(--space-sm);
+  line-height: 1.5;
+  font-size: var(--font-size-sm);
+}
+
+ol.toc li.toc-poem {
   margin-left: var(--space-sm);
   line-height: 1.5;
   font-size: var(--font-size-sm);
