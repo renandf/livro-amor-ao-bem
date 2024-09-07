@@ -328,6 +328,26 @@ ol.toc {
   padding: 0;
 }
 
+dl.toc-legend {
+  margin-bottom: 1cm;
+  font-family: Serif, prince-no-fallback;
+  font-size: var(--font-size-sm);
+  columns: 2;
+}
+
+dl.toc-legend dt {
+  display: inline-block;
+  width: 0.8cm;
+  font-family: BookFont, prince-no-fallback;
+}
+
+dl.toc-legend dd {
+  margin-left: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  width: calc(100% - 0.8cm);
+}
+
 /* Emphasis text on 'Serif' font to fix missing special characters */
 /* and slightly bigger to align with default font */
 em {
