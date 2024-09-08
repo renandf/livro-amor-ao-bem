@@ -333,6 +333,7 @@ blockquote {
 p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  line-height: var(--line-height-default);
 }
 
 p.quote::before {
@@ -448,12 +449,20 @@ a.xref:after {
   text-align: center;
 }
 
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
 .text-xs {
   font-size: var(--font-size-xs);
 }
 
 .text-italic {
   font-style: italic;
+}
+
+.text-light {
+  color: var(--color-text-light);
 }
 
 .ml-1 {
