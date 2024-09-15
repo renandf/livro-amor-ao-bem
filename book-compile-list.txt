@@ -10,5 +10,10 @@ content/p-buda/ch-p-buda-003.html
 content/p-buda/ch-p-buda-poem-002.html
 content/p-buda/ch-p-buda-004.html
 content/p-buda/ch-p-buda-005.html
+content/p-buda/ch-p-buda-006.html
+content/p-buda/ch-p-buda-007.html
+content/p-buda/ch-p-buda-008.html
+content/p-buda/ch-p-buda-009.html
+content/p-buda/ch-p-buda-010.html
 content/notas-traducao.html
 content/bibliografia.html
