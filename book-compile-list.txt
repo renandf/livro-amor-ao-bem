@@ -1,4 +1,5 @@
 content/book-start.html
+content/prefacio.html
 content/sumario.html
 content/amor-ao-bem.html
 content/p-buda.html
@@ -9,6 +10,5 @@ content/p-buda/ch-p-buda-003.html
 content/p-buda/ch-p-buda-poem-002.html
 content/p-buda/ch-p-buda-004.html
 content/p-buda/ch-p-buda-005.html
-content/colofao.html
 content/notas-traducao.html
 content/bibliografia.html
