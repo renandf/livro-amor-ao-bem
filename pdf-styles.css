@@ -20,9 +20,9 @@
   --font-weight-bold: 700;
   --font-weight-light: 300;
   
-  --page-margin-sm: 1.8cm;
-  --page-margin-md: 2cm;
-  --page-margin-lg: 2.5cm;
+  --page-margin-sm: 1cm;
+  --page-margin-md: 1.5cm;
+  --page-margin-lg: 2cm;
   
   --page-region-margin-outer: 0.36cm;
   --page-region-margin-inner: 1cm;
@@ -65,7 +65,7 @@ body {
   margin-top: var(--page-margin-md);
   margin-bottom: var(--page-margin-md);
   margin-inside: var(--page-margin-lg);
-  margin-outside: var(--page-margin-sm);
+  margin-outside: var(--page-margin-md);
   font-family: BookFont, prince-no-fallback;
 
   @bottom-center {
