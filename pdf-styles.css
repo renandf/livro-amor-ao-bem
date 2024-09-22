@@ -29,8 +29,9 @@
   --page-region-margin-left: 0;
   --page-region-margin-right: 0;
 
-  --space-sm: 0.5cm;
   --space-md: 1cm;
+  --space-sm: 0.5cm;
+  --space-xs: 0.3cm;
   --space-xxxl: 2.5cm;
   
   --border-thickness-default: 0.01cm;
@@ -252,7 +253,7 @@ h2.chapter::before {
 h2 {
   string-set: chaptertitle "As Palavras de Buda – " content();
   margin-top: var(--space-md);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .chapter-intro {
