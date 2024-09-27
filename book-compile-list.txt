@@ -53,5 +53,11 @@ content/p-buda/ch-p-buda-poem-012.html
 content/p-buda/ch-p-buda-036.html
 content/p-buda/ch-p-buda-037.html
 content/p-buda/ch-p-buda-poem-013.html
+content/p-buda/ch-p-buda-038.html
+content/p-buda/ch-p-buda-poem-014.html
+content/p-buda/ch-p-buda-poem-015.html
+content/p-buda/ch-p-buda-039.html
+content/p-buda/ch-p-buda-040.html
+content/p-buda/ch-p-buda-041.html
 content/notas-traducao.html
 content/bibliografia.html
