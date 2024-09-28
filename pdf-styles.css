@@ -602,3 +602,25 @@ a.xref:after {
   margin-left: calc(var(--space-sm) - 0.08cm);
   content: url("images/reason-arrow.svg");
 }
+
+.verse-with-author {
+  display: flex;
+}
+
+.verse-with-author > div {
+  padding-top: 0.275cm;
+  min-width: calc(var(--space-xxxl) - var(--space-sm));
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  text-align: right;
+  font-style: italic;
+}
+
+.verse-with-author > p {
+  display: inline-block;
+  margin-left: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-sm);
+  border-left: var(--border-thickness-default) solid var(--color-ui-light);
+}
+
