@@ -470,6 +470,10 @@ a.xref:after {
   color: var(--color-text-light);
 }
 
+.mt-md {
+  margin-top: var(--space-md);
+}
+
 .ml-1 {
   margin-left: 1cm;
 }
