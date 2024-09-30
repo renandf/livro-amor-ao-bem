@@ -72,5 +72,8 @@ content/p-buda/ch-p-buda-048.html
 content/p-buda/ch-p-buda-poem-019.html
 content/p-buda/ch-p-buda-049.html
 content/p-buda/ch-p-buda-050.html
+content/p-buda/ch-p-buda-051.html
+content/p-buda/ch-p-buda-052.html
+content/p-buda/ch-p-buda-053.html
 content/notas-traducao.html
 content/bibliografia.html
