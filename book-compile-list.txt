@@ -80,5 +80,14 @@ content/p-buda/ch-p-buda-055.html
 content/p-buda/ch-p-buda-056.html
 content/p-buda/ch-p-buda-057.html
 content/p-buda/ch-p-buda-poem-020.html
+content/p-buda/ch-p-buda-058.html
+content/p-buda/ch-p-buda-059.html
+content/p-buda/ch-p-buda-060.html
+content/p-buda/ch-p-buda-poem-021.html
+content/p-buda/ch-p-buda-061.html
+content/p-buda/ch-p-buda-062.html
+content/p-buda/ch-p-buda-063.html
+content/p-buda/ch-p-buda-064.html
+content/p-buda/ch-p-buda-065.html
 content/notas-traducao.html
 content/bibliografia.html
