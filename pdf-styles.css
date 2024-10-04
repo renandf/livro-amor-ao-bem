@@ -173,12 +173,6 @@ div.secondary-cover h1 {
   margin-bottom: 0;
   text-align: center;
 }
-div.secondary-cover p.author {
-  margin-top: 7.5cm;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-light);
-  text-align: center;
-}
 
 /* Blank page */
 div.blank {
