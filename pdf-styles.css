@@ -233,9 +233,6 @@ reset figure counter as figures start from 1 in each chapter */
 h1 {
   string-set: chaptertitle content();
   counter-reset: figurenum;
-  /* break-before: recto; */
-  /* counter-reset: footnote; */
-  /* line-height: 1.3; */
 }
 
 /* increment chapter counter for h2 (As Palavras de Buda) */
@@ -312,6 +309,14 @@ h5 {
   font-weight: var(--font-weight-bold);
   break-after: avoid;
   break-inside: avoid;
+}
+
+h2, h3 {
+  line-height: var(--line-height-condensed);
+}
+
+h3 {
+  font-style: italic;
 }
 
 h1 + p,
