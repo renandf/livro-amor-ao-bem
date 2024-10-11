@@ -181,6 +181,15 @@ content/p-buda/ch-p-buda-poem-034.html
 content/p-buda/ch-p-buda-142.html
 content/p-buda/ch-p-buda-143.html
 content/p-buda/ch-p-buda-144.html
+content/p-buda/ch-p-buda-145.html
+content/p-buda/ch-p-buda-146.html
+content/p-buda/ch-p-buda-poem-035.html
+content/p-buda/ch-p-buda-147.html
+content/p-buda/ch-p-buda-148.html
+content/p-buda/ch-p-buda-poem-036.html
+content/p-buda/ch-p-buda-149.html
+content/p-buda/ch-p-buda-150.html
+content/p-buda/ch-p-buda-151.html
 content/epilogo.html
 content/notas-traducao.html
 content/bibliografia.html
