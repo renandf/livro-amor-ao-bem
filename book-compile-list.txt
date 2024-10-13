@@ -217,6 +217,9 @@ content/p-buda/ch-p-buda-poem-044.html
 content/p-buda/ch-p-buda-168.html
 content/p-buda/ch-p-buda-poem-045.html
 content/p-buda/ch-p-buda-169.html
+content/p-buda/ch-p-buda-170.html
+content/p-buda/ch-p-buda-171.html
+content/p-buda/ch-p-buda-172.html
 content/epilogo.html
 content/notas-traducao.html
 content/bibliografia.html
