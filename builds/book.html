@@ -8,7 +8,7 @@
     <meta name="keywords" content="Buda, budismo"/>
     <meta name="date" content="2024-09-17"/>
   </head>
-  <body>
+  <body onload="makeref(); maketf();">
 
     <!-- Cover -->
     <div class="frontcover"></div>
@@ -408,6 +408,7 @@
         <li class="toc__h2"><a href="#ch-p-buda-180">Detentores dos Três Saberes (DN 13)</a></li>
 
         <li><a href="#ch-epilogo">Epílogo (SN 7.18)</a></li>
+        <li><a href="#ch-notas">Notas</a></li>
         <li><a href="#ch-notas-traducao">Notas de Tradução</a></li>
         <li><a href="#ch-bibliografia">Bibliografia</a></li>
       </ol>
@@ -9275,6 +9276,67 @@
     </blockquote>
 
     <div class="divider"></div>
+
+  
+
+  
+    <h1 id="ch-notas" class="break-before">Notas</h1>
+
+    <ol id="ref"></ol>
+
+    <!-- JavaScript to assemble 'Notas' -->
+    <script>
+
+      function getElementsByClassName(oElm, strTagName, strClassName) {
+        let arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+        let arrReturnElements = new Array();
+        strClassName = strClassName.replace(/\-/g, "\\-");
+        let oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$)");
+        let oElement;
+        for(let i=0; i<arrElements.length; i++){
+          oElement = arrElements[i];
+          if(oRegExp.test(oElement.className)){
+            arrReturnElements.push(oElement);
+          }
+        }
+        return (arrReturnElements)
+      }
+
+      // turn references into endnotes
+      function makeref() {
+
+        // get element that will hold list of references
+        var refcontainer = document.getElementById('ref');
+        var ids = new Array();
+        var ent = new Array();
+        var refnum = 0;
+
+        // find all elements that contain footnote entries
+        ref = getElementsByClassName(document, "span", "fn");
+        
+        for(let i=0; i < ref.length; i++) {
+          ref[i].setAttribute("id", "ref"+i);
+
+          // store the reference in a string in an associative array
+          let str = ref[i].innerHTML;
+
+          // check to see if the entry is there already, if not add it
+          refnum = ent.indexOf(str);
+          if (refnum < 0) {
+            ent.push(str);
+          } 
+          refnum = ent.indexOf(str) + 1;
+        }
+
+        // go through list of index entries, create one li element per entry
+        for (let i=0; i < ent.length; i++) {
+          let li = document.createElement("li");
+          li.innerHTML = ent[i];
+          refcontainer.appendChild(li); 
+        }
+      }
+
+    </script>
 
   
 

@@ -23,10 +23,11 @@ bash book-compile.sh `< book-compile-list.txt` > builds/book.html
 
 2. Com o arquivo `book-compile-list.txt` compilado, rode o seguinte comando para gerar o arquivo pdf:
 ```
-prince -s pdf-styles.css builds/book.html -o builds/book-test.pdf --no-artificial-fonts
+prince -j -s pdf-styles.css builds/book.html -o builds/book-test.pdf --no-artificial-fonts
 ```
 
 Explicação de cada *flag*:
+- `-j` = `--javascript` habilita JavaScript para criação das `Notas` (`notas.html`)
 - `-s` aplica a estilização definida pelo arquivo em sequência (`pdf-styles.css`)
 - `-o` define o "output" que no caso está definido como `builds/book-test.pdf`
 - `--no-artificial-fonts` (opcional) mostra avisos de caracteres faltando.

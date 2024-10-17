@@ -627,3 +627,10 @@ a.xref:after {
   border-left: var(--border-thickness-default) solid var(--color-ui-light);
 }
 
+ol#ref {
+  margin-left: 0;
+}
+
+ol#ref li {
+  margin-bottom: var(--space-xs);
+}
