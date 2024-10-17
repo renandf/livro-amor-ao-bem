@@ -52,7 +52,7 @@ body {
 
 /* Reset chapter and figure counters on the body */
 body {
-  counter-reset: chapternum figurenum footnote;
+  counter-reset: chapternum figurenum footnote subchapternote;
   font-family: BookFont, prince-no-fallback;
   font-weight: var(--font-weight-default);
   font-size: var(--font-size-default);
@@ -261,14 +261,13 @@ figcaption:before {
   content: counter(chapternum) "-" counter(figurenum) ". ";
 }
 
-/* footnotes */
-.fn {
+/* footnotes (numbered) and subchapternote (*) */
+.fn, .sfn {
   float: footnote;
 }
 
-.fn {
+.fn, .sfn {
   margin-bottom: 0.2cm;
-  counter-increment: footnote;
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-condensed);
@@ -276,8 +275,15 @@ figcaption:before {
   font-style: normal;
 }
 
-.fn::footnote-call {
-  content: counter(footnote);
+.fn {
+  counter-increment: footnote;
+}
+
+.sfn {
+  counter-increment: subchapternote;
+}
+
+.fn::footnote-call, .sfn::footnote-call {
   vertical-align: super;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xxs);
@@ -285,11 +291,23 @@ figcaption:before {
   color: var(--color-text-default);
 }
 
-.fn::footnote-marker {
-  vertical-align: super;
+.fn::footnote-call {
+  content: counter(footnote);
+}
+
+.sfn::footnote-call {
+  content: counter(subchapternote, symbols('*', '**'));
+}
+
+.fn::footnote-marker, .sfn::footnote-marker {
   font-weight: var(--font-weight-default);
   font-size: var(--font-size-xs);
   color: var(--color-text-default);
+}
+
+.sfn::footnote-marker {
+  content: counter(subchapternote, symbols('*', '**'));
+  margin-right: 0.1cm;
 }
 
 @page {
@@ -313,6 +331,10 @@ h5 {
 
 h2, h3 {
   line-height: var(--line-height-condensed);
+}
+
+h2, h3, blockquote {
+  counter-reset: subchapternote;
 }
 
 h3 {
