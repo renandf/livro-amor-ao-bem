@@ -52,7 +52,7 @@ body {
 
 /* Reset chapter and figure counters on the body */
 body {
-  counter-reset: chapternum figurenum footnote subchapternote;
+  counter-reset: chapternum figurenum counterfn subchapternote;
   font-family: BookFont, prince-no-fallback;
   font-weight: var(--font-weight-default);
   font-size: var(--font-size-default);
@@ -276,7 +276,7 @@ figcaption:before {
 }
 
 .fn {
-  counter-increment: footnote;
+  counter-increment: counterfn;
 }
 
 .sfn {
@@ -292,7 +292,7 @@ figcaption:before {
 }
 
 .fn::footnote-call {
-  content: counter(footnote);
+  content: counter(counterfn);
 }
 
 .sfn::footnote-call {
@@ -303,6 +303,11 @@ figcaption:before {
   font-weight: var(--font-weight-default);
   font-size: var(--font-size-xs);
   color: var(--color-text-default);
+}
+
+.fn::footnote-marker {
+  content: counter(counterfn) ".";
+  margin-right: 0.1cm;
 }
 
 .sfn::footnote-marker {
