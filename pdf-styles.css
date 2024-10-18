@@ -62,7 +62,7 @@ body {
 
 @page {
   /* A5 = 14.8cm x 21cm */
-  size: A5;
+  size: 15.5cm 22.5cm;
   margin-top: var(--page-margin-md);
   margin-bottom: var(--page-margin-md);
   margin-inside: var(--page-margin-lg);
@@ -333,7 +333,7 @@ h2, h3 {
   line-height: var(--line-height-condensed);
 }
 
-h2, h3, blockquote {
+h2, h3, blockquote, .resetsfn {
   counter-reset: subchapternote;
 }
 
@@ -491,6 +491,10 @@ a.xref:after {
   color: var(--color-text-light);
 }
 
+.text-condensed {
+  letter-spacing: -0.5px;
+}
+
 .mt-md {
   margin-top: var(--space-md);
 }
@@ -500,7 +504,7 @@ a.xref:after {
 }
 
 .quote-center {
-  margin: 8cm 0 7cm 1cm;
+  margin: 9cm 0 7cm 1cm;
   font-style: italic;
 }
 
@@ -542,7 +546,7 @@ a.xref:after {
 }
 
 .verse-block--monk {
-  margin-bottom: var(--space-md);
+  /* margin-bottom: var(--space-md); */
   border-left: var(--border-thickness-default) solid var(--color-ui-dark);
   font-family: Serif, prince-no-fallback;
   font-style: italic;
