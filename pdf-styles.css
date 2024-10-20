@@ -500,6 +500,10 @@ a.xref:after {
   letter-spacing: -0.5px;
 }
 
+.text-condensed--sm {
+  letter-spacing: -0.2px;
+}
+
 .mt-md {
   margin-top: var(--space-md);
 }
