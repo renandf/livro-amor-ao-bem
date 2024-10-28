@@ -361,6 +361,15 @@ blockquote.blockquote--sm {
   margin-left: var(--space-sm);
 }
 
+blockquote.blockquote--emphasis {
+  font-family: Serif, prince-no-fallback;
+  font-style: italic;
+  font-size: 115%;
+  margin-left: 0;
+  border-left: var(--space-sm) solid var(--color-ui-light);
+  padding-left: var(--space-sm);
+}
+
 p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -506,6 +515,10 @@ a.xref:after {
 
 .mt-md {
   margin-top: var(--space-md);
+}
+
+.mt-last-poem {
+  margin-top: 6cm;
 }
 
 .ml-1 {
