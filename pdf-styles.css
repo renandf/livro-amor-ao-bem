@@ -235,14 +235,14 @@ h1 {
   counter-reset: figurenum;
 }
 
-/* increment chapter counter for h2 (As Palavras de Buda) */
+/* increment chapter counter for h2 (As Palavras do Buda) */
 h2.chapter::before {
   counter-increment: chapternum;
   content: counter(chapternum) ". ";
 }
 
 h2 {
-  string-set: chaptertitle "As Palavras de Buda – " content();
+  string-set: chaptertitle "As Palavras do Buda – " content();
   margin-top: var(--space-md);
   margin-bottom: var(--space-xs);
 }
