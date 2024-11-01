@@ -69,6 +69,11 @@ body {
   margin-outside: var(--page-margin-md);
   font-family: BookFont, prince-no-fallback;
 
+  /* Uncomment when exporting for print */
+  marks: crop;
+  prince-bleed: 0.3cm;
+  prince-trim: 1cm;
+
   @bottom-center {
     margin: var(--page-region-margin-outer) var(--page-region-margin-right) var(--page-region-margin-inner) var(--page-region-margin-left);
     content: counter(page);
@@ -77,6 +82,15 @@ body {
     font-size: var(--font-size-xs);
     color: var(--color-text-light);
   }
+}
+
+@prince-pdf {
+  prince-pdf-output-intent: url("icc/eciCMYK_v2.icc");
+  prince-fallback-cmyk-profile: url("icc/eciCMYK_v2.icc");
+  prince-pdf-page-colorspace: cmyk;
+  prince-pdf-color-options: use-true-black;
+  prince-pdf-color-conversion: full;
+	prince-pdf-profile: "PDF/X-1a:2003";
 }
 
 /* Styles for pages on the right */
@@ -226,6 +240,11 @@ div.intro-page {
 
 img {
   max-width: 100%;
+}
+
+sup {
+  vertical-align: text-top;
+  font-size: var(--font-size-xxs);
 }
 
 /* get the title of the current chapter - this will be the content of the h1 
