@@ -70,9 +70,9 @@ body {
   font-family: BookFont, prince-no-fallback;
 
   /* Uncomment when exporting for print */
-  marks: crop;
+  /* marks: crop;
   prince-bleed: 0.3cm;
-  prince-trim: 1cm;
+  prince-trim: 1cm; */
 
   @bottom-center {
     margin: var(--page-region-margin-outer) var(--page-region-margin-right) var(--page-region-margin-inner) var(--page-region-margin-left);
